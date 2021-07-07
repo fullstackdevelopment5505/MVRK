@@ -1,0 +1,368 @@
+{
+  "extensionsUsed": [
+    "CVTOOLS_babylon_mesh",
+    "CVTOOLS_left_handed",
+    "CVTOOLS_unity_metadata"
+  ],
+  "extensionsRequired": [
+    "CVTOOLS_babylon_mesh",
+    "CVTOOLS_left_handed"
+  ],
+  "asset": {
+    "generator": "Babylon (2020.1.8f1)",
+    "version": "2.0"
+  },
+  "buffers": [
+    {
+      "uri": "PosterRoomCSS.bin",
+      "byteLength": 0
+    }
+  ],
+  "nodes": [
+    {
+      "translation": [
+        0.0,
+        1.0,
+        -10.0
+      ],
+      "name": "Main Camera",
+      "extras": {
+        "metadata": {
+          "guid": "1bb6e1b0-04fe-4e65-9502-6092a41797b3",
+          "group": "MainCamera",
+          "tags": "MainCamera Layer0",
+          "components": [
+            {
+              "alias": "camera",
+              "type": 0,
+              "maincamera": true,
+              "perspectiveyfov": 1.04719758,
+              "perspectiveaspect": 1.45685279,
+              "perspectivezfar": 2011,
+              "perspectiveznear": 0.3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "rotation": [
+        0.408217877,
+        -0.234569684,
+        0.109381631,
+        0.8754261
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        0.99999994
+      ],
+      "translation": [
+        0.0,
+        50.0,
+        0.0
+      ],
+      "name": "Directional Light",
+      "extras": {
+        "metadata": {
+          "guid": "8cdbffe4-6879-40a4-a985-b707107953da",
+          "components": [
+            {
+              "alias": "light",
+              "type": 0,
+              "range": 10.0,
+              "color": {
+                "r": 1.0,
+                "g": 0.904661357,
+                "b": 0.6724432,
+                "a": 1.0
+              },
+              "specular": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 1.0
+              },
+              "intensity": 3.0,
+              "spotangle": 30.0,
+              "orthoscale": 0.1,
+              "autorender": true,
+              "lightmapmode": 0,
+              "softshadows": true,
+              "shadowmapsize": 2048,
+              "shadowquality": "High",
+              "generateshadows": true,
+              "shadowdistance": 150.0,
+              "shadowstrength": 1.0,
+              "shadowbiasfactor": 0.01,
+              "shadowmapbias": 0.05,
+              "normalmapbias": 0.4,
+              "shadownearplane": 0.2,
+              "numcascades": 4,
+              "cascadelambda": 1.0,
+              "twocascadesplit": 0.333333343,
+              "fourcascadesplit": [
+                0.06666667,
+                0.2,
+                0.466666669
+              ],
+              "blendpertecntage": 1E-08,
+              "boundsrefreshrate": 1,
+              "lightcontactratio": 0.1,
+              "contacthardening": false,
+              "stabilizecascades": false,
+              "freezeshadows": false,
+              "setdepthclamp": false,
+              "calcdepths": false,
+              "frustumedgefalloff": 0.0,
+              "forcebackfacesonly": false,
+              "transparencyshadow": false,
+              "shadowfilterquality": "High"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "translation": [
+        3.02671957,
+        6.72962332,
+        -4.350716
+      ],
+      "name": "Poster Room",
+      "extras": {
+        "metadata": {
+          "guid": "9e8dad05-12e8-47a7-ad97-6734dd68daa3",
+          "components": [
+            {
+              "alias": "script",
+              "order": 0,
+              "klass": "PROJECT.PosterRoom",
+              "properties": {
+                "stylesheet": {
+                  "type": "UnityEditor.DefaultAsset",
+                  "filename": "assets/project/stylesheets/style.css"
+                },
+                "backgroundImage": {
+                  "type": "UnityEngine.Texture2D",
+                  "name": "background",
+                  "width": 2048,
+                  "height": 1024,
+                  "filename": "assets/project/textures/background.jpg",
+                  "wrapmode": "repeat",
+                  "filtermode": "bilinear",
+                  "anisolevel": 1
+                },
+                "poster1": {
+                  "type": "UnityEngine.Texture2D",
+                  "name": "poster_v1",
+                  "width": 1024,
+                  "height": 1024,
+                  "filename": "assets/project/materials/textures/screengraphics/poster_v1.jpg",
+                  "wrapmode": "repeat",
+                  "filtermode": "bilinear",
+                  "anisolevel": 1
+                },
+                "poster2": {
+                  "type": "UnityEngine.Texture2D",
+                  "name": "poster_v2",
+                  "width": 1024,
+                  "height": 1024,
+                  "filename": "assets/project/materials/textures/screengraphics/poster_v2.jpg",
+                  "wrapmode": "repeat",
+                  "filtermode": "bilinear",
+                  "anisolevel": 1
+                },
+                "poster3": {
+                  "type": "UnityEngine.Texture2D",
+                  "name": "poster_v3",
+                  "width": 1024,
+                  "height": 1024,
+                  "filename": "assets/project/materials/textures/screengraphics/poster_v3.jpg",
+                  "wrapmode": "repeat",
+                  "filtermode": "bilinear",
+                  "anisolevel": 1
+                }
+              },
+              "instance": null
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0,
+        1,
+        2
+      ],
+      "name": "PosterRoomCSS",
+      "extras": {
+        "metadata": {
+          "gltf": true,
+          "debugging": true,
+          "properties": true,
+          "disposeroot": false,
+          "ktxtextures": false,
+          "rendergroups": 4,
+          "rawmaterials": [],
+          "script": "verizon-techweek-3d",
+          "project": "Verizon-TechWeek-3D.js",
+          "filename": "PosterRoomCSS",
+          "exposure": 1,
+          "tonemapping": 0,
+          "gammacorrection": 1,
+          "deltaworldstep": true,
+          "pointerlock": false,
+          "preventdefault": false,
+          "ccdpenetration": 0.0,
+          "ccdenabled": true,
+          "maxphysicsstep": 0,
+          "maxworldsweep": 0,
+          "enableinput": true,
+          "usecapture": false,
+          "userinput": null,
+          "showdebugcolliders": false,
+          "collidervisibility": 0.5,
+          "collisionwireframe": true,
+          "navigation": {
+            "prebaked": null,
+            "tilecount": 0,
+            "showdebug": false,
+            "debugcolor": [
+              0.05,
+              0.225,
+              0.75,
+              1.0
+            ],
+            "areatable": [
+              {
+                "index": 0,
+                "area": "Walkable",
+                "cost": 1.0
+              },
+              {
+                "index": 1,
+                "area": "Not Walkable",
+                "cost": 1.0
+              },
+              {
+                "index": 2,
+                "area": "Jump",
+                "cost": 2.0
+              }
+            ],
+            "bakeprops": {
+              "cs": 0.25,
+              "ch": 0.05,
+              "walkableradius": 0,
+              "walkableheight": 0,
+              "walkableslopeangle": 90.0,
+              "walkableclimb": 5,
+              "maxedgelen": 12,
+              "minregionarea": 2,
+              "mergeregionarea": 20,
+              "maxsimplificationerror": 1.3,
+              "maxvertsperpoly": 6,
+              "detailsampledist": 6.0,
+              "detailsamplemaxerror": 1.0
+            },
+            "offmeshlinks": null
+          },
+          "autoclear": true,
+          "clearcolor": {
+            "r": 0.192156866,
+            "g": 0.3019608,
+            "b": 0.4745098,
+            "a": 1.0
+          },
+          "sunposition": {
+            "x": 0.0,
+            "y": 50.0,
+            "z": 0.0
+          },
+          "sunrotation": {
+            "x": 0.408217877,
+            "y": -0.234569684,
+            "z": 0.109381631,
+            "w": 0.8754261
+          },
+          "enablephysics": false,
+          "defaultgravity": {
+            "x": 0.0,
+            "y": -9.81,
+            "z": 0.0
+          },
+          "freezeactivemeshes": true,
+          "imageprocessing": {
+            "contrast": 1.0,
+            "exposure": 1.0
+          },
+          "ambientlightintensity": 1.0,
+          "ambientspecularcolor": {
+            "r": 0.0,
+            "g": 0.0,
+            "b": 0.0,
+            "a": 1.0
+          },
+          "ambientgroundcolor": {
+            "r": 0.65,
+            "g": 0.65,
+            "b": 0.65,
+            "a": 1.0
+          },
+          "ambientskycolor": {
+            "r": 0.65,
+            "g": 0.65,
+            "b": 0.65,
+            "a": 1.0
+          },
+          "ambientcoloring": {
+            "r": 0.3,
+            "g": 0.3,
+            "b": 0.3,
+            "a": 1.0
+          },
+          "ambientlighting": 1,
+          "fogtype": "None",
+          "fogmode": 0,
+          "fogdensity": 0.01,
+          "fogcolor": {
+            "r": 0.5,
+            "g": 0.5,
+            "b": 0.5,
+            "a": 1.0
+          },
+          "fogstart": 0.0,
+          "fogend": 300.0,
+          "skybox": {
+            "skyfog": false,
+            "skytags": "",
+            "skysize": 2000.0,
+            "skysrgb": true,
+            "skyfaces": "png",
+            "basename": "assets/Default-Skybox",
+            "anisolevel": 8,
+            "exposure": 1.3,
+            "rotation": 0.0,
+            "maxreflect": false,
+            "hdrskybox": false,
+            "extensions": [
+              "_px.png",
+              "_py.png",
+              "_pz.png",
+              "_nx.png",
+              "_ny.png",
+              "_nz.png"
+            ],
+            "polynomial": 0.01,
+            "environment": null
+          }
+        }
+      }
+    }
+  ]
+}

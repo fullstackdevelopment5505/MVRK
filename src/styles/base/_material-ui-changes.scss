@@ -1,0 +1,25 @@
+.MuiPaper-root {
+  background-color: $black !important;
+}
+.MuiExpansionPanel-root:before {
+  height: 0px !important;
+}
+// TODO - remove this temporary hotfix on outline hover inputs in light background
+input.MuiInputBase-input.MuiOutlinedInput-input:not(.focus-visible) {
+  outline: 1px solid lightgray;
+}
+.MuiInputBase-multiline {
+  outline: 1px solid lightgray;
+}
+
+// TODO - remove this temporary hotfix on hovered pillbox buttons
+#postersubmission button.MuiButtonBase-root:hover {
+  background-color: hsl(0,0,20);
+}
+
+// TODO - remove temporary hotfix outline hover inputs light background label
+label.MuiFormLabel-root {
+  background-color: white;
+  padding-left: 2px;
+  padding-right: 3px;
+}

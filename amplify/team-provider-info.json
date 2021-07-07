@@ -1,0 +1,20 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-techweek-dev-224343-authRole",
+            "UnauthRoleArn": "arn:aws:iam::675340416359:role/amplify-techweek-dev-224343-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::675340416359:role/amplify-techweek-dev-224343-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-techweek-dev-224343-deployment",
+            "UnauthRoleName": "amplify-techweek-dev-224343-unauthRole",
+            "StackName": "amplify-techweek-dev-224343",
+            "StackId": "arn:aws:cloudformation:us-east-1:675340416359:stack/amplify-techweek-dev-224343/c2fc0ad0-02c6-11eb-86c7-0a818cac4dad",
+            "AmplifyAppId": "d2o6b06bpexdr7"
+        },
+        "categories": {
+            "auth": {
+                "techweek9986638f": {}
+            }
+        }
+    }
+}

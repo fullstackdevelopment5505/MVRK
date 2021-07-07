@@ -1,0 +1,30 @@
+.tutorial-highlight,
+.introjs-helperNumberLayer {
+  display: none;
+}
+
+.introjs-tooltip {
+  color: $black;
+  min-width: 370px;
+  border-radius: 0;
+  padding: 15px;
+
+  @include md-max {
+    min-width: 175px;
+  }
+
+  .introjs-tooltipbuttons {
+    text-align: center;
+
+    .introjs-skipbutton {
+      margin-right: 10px;
+    }
+
+    .introjs-button {
+      padding: 6px 10px;
+      font-family: $global-font1;
+      font-weight: bold;
+      font-size: 13px;
+    }
+  }
+}

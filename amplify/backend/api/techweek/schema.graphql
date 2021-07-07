@@ -1,0 +1,117 @@
+type User @model(subscriptions: null, mutations: { create: "createUser", update: "updateUser" })
+  @key(name: "ByEmail", fields: ["email"], queryField: "userByEmail") {
+  id: ID!
+  firstName: String!
+  lastName: String!
+  email: String!
+  avatar: String
+  phoneNumber: String
+  company: String
+  companySize: String
+  companyAddress1: String
+  companyCity: String
+  companyState: String
+  companyPostalCode: String
+  country: String
+  address1: String
+  city: String
+  state: String
+  postalCode: String
+  title: String
+  timeZone: String
+  team: String
+  interests: [String]
+  tShirt: String
+  accessibilityNeeds: String
+  rsvp: [String]
+  invitedTo: [String],
+  viewOnlyTicket: Boolean,
+  conversations: [ConvoLink] @connection(keyName: "byConvoUser", fields: ["id"])
+  messages: [Message] @connection(keyName: "byAuthor", fields: ["id"])
+  sessions: [UserSessionReservation] @connection(keyName: "byUserSessionsReservs", fields: ["id"])
+}
+
+type Conversation @model(subscriptions: null) {
+  id: ID!
+  name: String!
+  members: [String!]!
+  messages: [Message] @connection(keyName: "byConversationByDate", fields: ["id"])
+  associated: [ConvoLink] @connection(keyName: "byUserConvo", fields: ["id"])
+}
+
+type Session @model(subscriptions: null) {
+  id: ID!
+  name: String!
+}
+
+type UserSessionReservation
+  @model(
+    mutations: { create: "createSessionReservation", update: "updateSessionReservation" }
+    queries: null
+    subscriptions: null
+  )
+  @key(name: "bySessionUsersReservs", fields: ["userId", "sessionId"])
+  @key(name: "byUserSessionsReservs", fields: ["sessionId", "userId"]) {
+  id: ID!
+  userId: ID!
+  sessionId: ID!
+  user: User! @connection(fields: ["userId"])
+  session: Session! @connection(fields: ["sessionId"])
+}
+
+type Message
+  @model(subscriptions: null, queries: null)
+  @key(name: "byAuthor", fields: ["authorId", "id"], queryField: "messageByAuthor")
+  @key(name: "byAuthorByDate", fields: ["authorId", "createdAt"], queryField: "messageByAuthorByDate")
+  @key(name: "byConversation", fields: ["conversationId", "id"], queryField: "messageByConversation")
+  @key(name: "byConversationByDate", fields: ["conversationId", "createdAt"], queryField: "messageByConversationDate") {
+  id: ID!
+  content: String!
+  authorId: ID!
+  conversationId: ID!
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+}
+
+type SurveyQuestion @model(subscriptions: null) {
+  id: ID!
+  name: String!
+}
+
+type SurveyAnswer @model(subscriptions: null, queries: null) {
+  id: ID!
+  answer: String!
+  userId: ID!
+  questionId: ID!
+  user: User! @connection(fields: ["userId"])
+  question: SurveyQuestion! @connection(fields: ["questionId"])
+}
+
+type ConvoLink
+  @model(mutations: { create: "createConvoLink", update: "updateConvoLink" }, queries: null, subscriptions: null)
+  @key(name: "byConvoUser", fields: ["userId", "conversationId"])
+  @key(name: "byUserConvo", fields: ["conversationId", "userId"]) {
+  id: ID!
+  userId: ID!
+  conversationId: ID!
+  user: User! @connection(fields: ["userId"])
+  conversation: Conversation! @connection(fields: ["conversationId"])
+}
+
+type PresenterDetails @model(subscriptions: null) {
+  id: ID!
+  fullName: String!
+  email: String!
+  coPresenterName: String!
+  submissionNumber: String!
+  posterTitle: String!
+  impactStatement: String!
+  posterImage: String!
+}
+
+type Subscription {
+  onCreateConvoLink(convoLinkUserId: ID!): ConvoLink @aws_subscribe(mutations: ["createConvoLink"])
+  onCreateMessage(conversationId: ID!): Message @aws_subscribe(mutations: ["createMessage"])
+  onCreateGlobalMessage: Message @aws_subscribe(mutations: ["createMessage"])
+  onCreateUser: User @aws_subscribe(mutations: ["createUser"])
+}
